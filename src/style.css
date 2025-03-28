@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@font-face {
+    font-family: 'edit';
+    src: url('src/fonts/EDIX.ttf');
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
