@@ -7,11 +7,17 @@
 			<h1 class=" text-8xl font-bold" style="font-family: EDIX">Flyunion</h1>
 		</div>
 	</div>
-	<div ref="productList" class="animate__animated " :class="{'animate__fadeInUp': isAnimated}">
+	<div ref="productList" class="animate__animated ">
 		<About />
 	</div>
-	<div ref="productList" class="animate__animated " :class="{'animate__fadeInUp': isAnimated}">
+	<div ref="productList" class="animate__animated " >
 		<People />
+	</div>
+	<div ref="productList" class="animate__animated " >
+		<Product />
+	</div>
+	<div ref="productList" class="animate__animated " >
+		<Platform />
 	</div>
 </template>
 
@@ -20,12 +26,16 @@ import ProductList from './ProductList.vue'
 import About from "./About.vue";
 import 'animate.css';
 import People from "./People.vue";
+import Platform from "./Platform.vue";
+import Product from "./Product.vue";
 
 export default {
 	components: {
 		ProductList,
 		About,
-		People
+		People,
+		Platform,
+		Product
 	},
 	data() {
 		return {
