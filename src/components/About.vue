@@ -1,5 +1,11 @@
-<script setup>
-
+<script >
+export default {
+	methods: {
+		goto() {
+			window.location.href = "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=9LN2BzklVawtrMOc7ts6V2gWY8ax5PO-&authKey=dDym3UH7JkYUomI67zkraVUbFlmyhQLK1%2FETFPGSPb4jVq5c4lxsTfJYbuWcZp%2FT&noverify=0&group_code=805902191";
+		}
+	}
+};
 </script>
 
 <template>
@@ -14,6 +20,7 @@
 					并且拥有良好的沟通 skills，<br>
 					并且能够很好的与客户进行沟通。
 				</h2>
+				<button class="btn btn-primary" @click="goto">联系我们</button>
 			</div>
 		</div>
 	</div>

@@ -4,7 +4,7 @@
 		style="background-image: url('src/assets/paperwall_6.jpg')" >
 		<div class="hero-overlay"></div>
 		<div class="hero-content text-neutral-content text-center">
-			<h1 class=" text-8xl font-bold" style="font-family: EDIX">Flyunion</h1>
+			<h1 class=" text-8xl font-bold" style="font-family: EDIX">Flyunion Studio</h1>
 		</div>
 	</div>
 	<div ref="productList" class="animate__animated ">
@@ -17,7 +17,13 @@
 		<Product />
 	</div>
 	<div ref="productList" class="animate__animated " >
+		<ProductList />
+	</div>
+	<div ref="productList" class="animate__animated " >
 		<Platform />
+	</div>
+	<div ref="productList" class="animate__animated " >
+		<Footer />
 	</div>
 </template>
 
@@ -28,6 +34,7 @@ import 'animate.css';
 import People from "./People.vue";
 import Platform from "./Platform.vue";
 import Product from "./Product.vue";
+import Footer from "./Footer.vue";
 
 export default {
 	components: {
@@ -35,7 +42,8 @@ export default {
 		About,
 		People,
 		Platform,
-		Product
+		Product,
+		Footer
 	},
 	data() {
 		return {

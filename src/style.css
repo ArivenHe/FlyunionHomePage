@@ -6,8 +6,23 @@
     font-family: 'edit';
     src: url('src/fonts/EDIX.ttf');
 }
-
+@font-face {
+    font-family: 'default';
+    src: url('src/fonts/default.woff2');
+}
 body{
     background-color: black;
     overflow-x: hidden;
+    font-family: default;
+}
+span {
+    font-family: 'default';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'default';
+}
+div
+{
+    font-family: 'default';
 }

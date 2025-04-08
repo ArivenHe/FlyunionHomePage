@@ -9,27 +9,21 @@
 			<div class="carousel w-full" ref="carousel">
 				<div id="slide1" class="carousel-item relative w-full">
 					<img
-						src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-						class="w-full" />
+						src="/src/assets/IMPES_1.png"
+						class="img-responsive" />
 				</div>
 				<div id="slide2" class="carousel-item relative w-full">
 					<img
-						src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-						class="w-full" />
+						src="/src/assets/SXC.png"
+						class="img-responsive" />
 				</div>
 				<div id="slide3" class="carousel-item relative w-full">
 					<img
-						src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-						class="w-full" />
-				</div>
-				<div id="slide4" class="carousel-item relative w-full">
-					<img
-						src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-						class="w-full" />
+						src="/src/assets/FLYUNION.png"
+						class="img-responsive" />
 				</div>
 			</div>
 		</div>
-
 	</div>
 </template>
 
@@ -54,17 +48,17 @@ export default {
 		startAutoSlide() {
 			this.slideInterval = setInterval(() => {
 				this.nextSlide();
-			}, 3000); // 每3秒切换一次
+			}, 5000); // 每3秒切换一次
 		},
 		stopAutoSlide() {
 			clearInterval(this.slideInterval);
 		},
 		nextSlide() {
-			this.currentSlide = this.currentSlide === 4 ? 1 : this.currentSlide + 1;
+			this.currentSlide = this.currentSlide === 3 ? 1 : this.currentSlide + 1;
 			this.updateSlide();
 		},
 		prevSlide() {
-			this.currentSlide = this.currentSlide === 1 ? 4 : this.currentSlide - 1;
+			this.currentSlide = this.currentSlide === 1 ? 3 : this.currentSlide - 1;
 			this.updateSlide();
 		},
 		updateSlide() {
@@ -115,6 +109,14 @@ export default {
 	position: relative;
 	overflow: hidden;
 	height: 500px; /* 设置轮播图高度 */
+}
+
+/* 图片响应式样式 */
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
 }
 
 .scrolling-text {

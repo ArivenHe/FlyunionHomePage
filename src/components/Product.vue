@@ -5,11 +5,13 @@
 				src="../assets/impes.png"
 				class="max-w-xl rounded-lg shadow-2xl" />
 			<div>
-				<h1 class="text-5xl font-bold gradient-text">定制飞控</h1>
+				<h1 class="text-5xl font-bold gradient-text">定制综合管理平台</h1>
 				<p class="py-6">
 					这是一款专业级的飞行模拟管理系统，为大家提供活动报名，数据查询等。
+					<br>
+					Aerion-Integrated-Management-Platform™
 				</p>
-				<button class="btn btn-primary">查看实际使用平台</button>
+				<button class="btn btn-primary" @click="goto">查看实际使用平台</button>
 			</div>
 		</div>
 	</div>
@@ -31,5 +33,13 @@
 	-webkit-text-fill-color: transparent;
 }
 </style>
-<script setup lang="ts">
+<script>
+export default {
+	name: "Product",
+	methods:{
+		goto(){
+			window.location.href='https://www.impes.net/'
+		}
+	}
+}
 </script>
