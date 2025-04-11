@@ -9,17 +9,17 @@
 			<div class="carousel w-full" ref="carousel">
 				<div id="slide1" class="carousel-item relative w-full">
 					<img
-						src="/src/assets/IMPES_1.png"
+						src="../assets/IMPES_1.png"
 						class="img-responsive" />
 				</div>
 				<div id="slide2" class="carousel-item relative w-full">
 					<img
-						src="/src/assets/SXC.png"
+						src="../assets/SXC.png"
 						class="img-responsive" />
 				</div>
 				<div id="slide3" class="carousel-item relative w-full">
 					<img
-						src="/src/assets/FLYUNION.png"
+						src="../assets/FLYUNION.png"
 						class="img-responsive" />
 				</div>
 			</div>

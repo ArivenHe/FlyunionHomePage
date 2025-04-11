@@ -1,4 +1,8 @@
 <script>
+import arivenImg from "../assets/ariven.jpg"
+import WilliamHeImg from "../assets/WilliamHe.jpg"
+import XLiaovoImg from "../assets/XLiaovo.jpg"
+import desuImg from "../assets/desu.jpg"
 export default {
 	name: "People",
 	data() {
@@ -6,28 +10,28 @@ export default {
 			peopleList: [
 				{
 					name: "Ariven",
-					avatar: "src/assets/ariven.jpg",
+					avatar: arivenImg,
 					qq: "3208629021",
 					email: "qq3208629021@outlook.com",
 					introduction: "前端开发，软件开发工程师"
 				},
 				{
 					name: "William He",
-					avatar: "src/assets/WilliamHe.jpg",
+					avatar: WilliamHeImg,
 					qq: "2084791301",
 					email: "2084791301@qq.com",
 					introduction: "FSD服务器，机载调频开发工程师"
 				},
 				{
 					name: "XLiaovo",
-					avatar: "src/assets/XLiaovo.jpg",
+					avatar: XLiaovoImg,
 					qq: "2456666787",
 					email: "2456666787@qq.com",
 					introduction: "后端开发工程师"
 				},
 				{
 					name: "空崎ヒナdesu",
-					avatar: "src/assets/desu.jpg",
+					avatar: desuImg,
 					qq: "850824385",
 					email: "850824385@qq.com",
 					introduction: "虚拟航司系统开发工程师"

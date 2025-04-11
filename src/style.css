@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: 'edit';
-    src: url('src/fonts/EDIX.ttf');
+    src: url('../src/fonts/EDIX.ttf');
 }
 @font-face {
     font-family: 'default';
-    src: url('src/fonts/default.woff2');
+    src: url('../src/fonts/default.woff2');
 }
 body{
     background-color: black;

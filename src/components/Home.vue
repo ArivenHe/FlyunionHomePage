@@ -1,28 +1,26 @@
 <template>
-	<div
-		class="hero min-h-screen "
-		style="background-image: url('src/assets/paperwall_6.jpg')" >
+	<div class="hero min-h-screen home">
 		<div class="hero-overlay"></div>
-		<div class="hero-content text-neutral-content text-center">
-			<h1 class=" text-8xl font-bold" style="font-family: EDIX">Flyunion Studio</h1>
+		<div class="hero-content text-neutral-content text-center" ref="title">
+			<h1 class="text-8xl font-bold" style="font-family: EDIX">Flyunion Studio</h1>
 		</div>
 	</div>
-	<div ref="productList" class="animate__animated ">
+	<div ref="about" class="animate__animated opacity-0">
 		<About />
 	</div>
-	<div ref="productList" class="animate__animated " >
+	<div ref="people" class="animate__animated opacity-0">
 		<People />
 	</div>
-	<div ref="productList" class="animate__animated " >
+	<div ref="product" class="animate__animated opacity-0">
 		<Product />
 	</div>
-	<div ref="productList" class="animate__animated " >
+	<div ref="productList" class="animate__animated opacity-0">
 		<ProductList />
 	</div>
-	<div ref="productList" class="animate__animated " >
+	<div ref="platform" class="animate__animated opacity-0">
 		<Platform />
 	</div>
-	<div ref="productList" class="animate__animated " >
+	<div ref="footer" class="animate__animated opacity-0">
 		<Footer />
 	</div>
 </template>
@@ -35,6 +33,10 @@ import People from "./People.vue";
 import Platform from "./Platform.vue";
 import Product from "./Product.vue";
 import Footer from "./Footer.vue";
+import gsap from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import title from "./Title.vue";
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
 	components: {
@@ -43,32 +45,137 @@ export default {
 		People,
 		Platform,
 		Product,
-		Footer
+		Footer,
+		title
 	},
 	data() {
 		return {
 			isAnimated: false
 		};
 	},
+	mounted() {
+		this.setupAnimations();
+	},
 	methods: {
-		handleScroll() {
-			const productList = this.$refs.productList;
-			const rect = productList.getBoundingClientRect();
-			if (rect.top < window.innerHeight && rect.bottom > 0) {
-				this.isAnimated = true;
-			}
+		setupAnimations() {
+			// 标题动画
+			gsap.to(this.$refs.title, {
+				scrollTrigger: {
+					trigger: this.$refs.title,
+					start: "top 80%",
+					end: "bottom 20%",
+					toggleActions: "restart none reverse none",
+				},
+				y: 0,
+				opacity: 1,
+				scale: 1,
+				rotation: 0,
+				duration: 1,
+				ease: "power1.out"
+			});
+
+			// 其他部分动画
+			gsap.to(this.$refs.about, {
+				scrollTrigger: {
+					trigger: this.$refs.about,
+					start: "top 80%",
+					end: "bottom 20%",
+					toggleActions: "restart none reverse none",
+				},
+				y: 0,
+				opacity: 1,
+				scale: 1,
+				rotation: 0,
+				duration: 1,
+				ease: "power1.out"
+			});
+
+			gsap.to(this.$refs.people, {
+				scrollTrigger: {
+					trigger: this.$refs.people,
+					start: "top 80%",
+					end: "bottom 20%",
+					toggleActions: "restart none reverse none",
+				},
+				y: 0,
+				opacity: 1,
+				scale: 1,
+				rotation: 0,
+				duration: 1,
+				ease: "power1.out"
+			});
+
+			gsap.to(this.$refs.product, {
+				scrollTrigger: {
+					trigger: this.$refs.product,
+					start: "top 80%",
+					end: "bottom 20%",
+					toggleActions: "restart none reverse none",
+				},
+				y: 0,
+				opacity: 1,
+				scale: 1,
+				rotation: 0,
+				duration: 1,
+				ease: "power1.out"
+			});
+
+			gsap.to(this.$refs.productList, {
+				scrollTrigger: {
+					trigger: this.$refs.productList,
+					start: "top 80%",
+					end: "bottom 20%",
+					toggleActions: "restart none reverse none",
+				},
+				y: 0,
+				opacity: 1,
+				scale: 1,
+				rotation: 0,
+				duration: 1,
+				ease: "power1.out"
+			});
+
+			gsap.to(this.$refs.platform, {
+				scrollTrigger: {
+					trigger: this.$refs.platform,
+					start: "top 80%",
+					end: "bottom 20%",
+					toggleActions: "restart none reverse none",
+				},
+				y: 0,
+				opacity: 1,
+				scale: 1,
+				rotation: 0,
+				duration: 1,
+				ease: "power1.out"
+			});
+
+			gsap.to(this.$refs.footer, {
+				scrollTrigger: {
+					trigger: this.$refs.footer,
+					start: "top 80%",
+					end: "bottom 20%",
+					toggleActions: "restart none reverse none",
+				},
+				y: 0,
+				opacity: 1,
+				scale: 1,
+				rotation: 0,
+				duration: 1,
+				ease: "power1.out"
+			});
 		}
 	},
-	mounted() {
-		window.addEventListener('scroll', this.handleScroll);
-	},
 	beforeDestroy() {
-		window.removeEventListener('scroll', this.handleScroll);
+		ScrollTrigger.getAll().forEach(t => t.kill());
 	}
 }
 </script>
 
 <style scoped>
+.home{
+	background-image: url('../assets/paperwall_6.jpg')
+}
 .font-inter {
 	font-family: 'EDIX', sans-serif;
 }
@@ -81,5 +188,12 @@ export default {
 	margin: 0;
 	padding: 0;
 	overflow-y: auto; /* 允许垂直滚动 */
+}
+
+/* 初始状态设置为不可见 */
+.opacity-0 {
+	opacity: 0;
+	transform: scale(0.9) rotate(-10deg);
+	transition: opacity 1s, transform 1s; /* 添加过渡效果 */
 }
 </style>
