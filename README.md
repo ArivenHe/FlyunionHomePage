@@ -126,7 +126,7 @@ onMounted(() => {
 ## 🌍 GitHub 仓库
 
 📦 访问项目仓库查看更多代码示例与更新日志：  
-👉 [https://github.com/yourname/vue3-vite-gsap-daisyui](https://github.com/yourname/vue3-vite-gsap-daisyui)
+👉 [https://github.com/ArivenHe/FlyunionHomePage](https://github.com/ArivenHe/FlyunionHomePage)
 
 ---
 **🎉 Happy Coding with Vue 3 + GSAP + DaisyUI + Vite!**
