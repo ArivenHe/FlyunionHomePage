@@ -1,4 +1,4 @@
-# 🚀 Vue 3 + Vite + GSAP + DaisyUI 项目模板
+# 🚀 AerionStudio HomePage
 
 这是一个基于 **Vue 3 + Vite** 构建的现代前端项目模板，集成了动画库 **GSAP** 和 UI 框架 **DaisyUI**，助你快速搭建美观且动态的前端应用。
 
